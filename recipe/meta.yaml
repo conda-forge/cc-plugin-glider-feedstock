@@ -1,41 +1,41 @@
 {% set version = "1.0.2" %}
 
 package:
-    name: cc-plugin-glider
-    version: {{ version }}
+  name: cc-plugin-glider
+  version: {{ version }}
 
 source:
-    fn: cc-plugin-glider-{{ version }}.tar.gz
-    url: https://github.com/ioos/cc-plugin-glider/archive/{{ version }}.tar.gz
-    sha256: 17c8fd7df37821458b9633849a42db5c8c8c8b6bb46c6be712a043995299c28c
+  fn: cc-plugin-glider-{{ version }}.tar.gz
+  url: https://github.com/ioos/cc-plugin-glider/archive/{{ version }}.tar.gz
+  sha256: 17c8fd7df37821458b9633849a42db5c8c8c8b6bb46c6be712a043995299c28c
 
 build:
-    number: 0
-    script: python setup.py install --single-version-externally-managed --record record.txt
-    entry_points:
-        - gliderdac = cc_plugin_glider.glider_dac:GliderCheck
+  number: 0
+  script: python setup.py install --single-version-externally-managed --record record.txt
+  entry_points:
+    - gliderdac = cc_plugin_glider.glider_dac:GliderCheck
 
 requirements:
-    build:
-        - python
-        - setuptools
-    run:
-        - python
-        - compliance-checker >=1.0.0
+  build:
+    - python
+    - setuptools
+  run:
+    - python
+    - compliance-checker >=1.0.0
 
 test:
-    imports:
-        - cc_plugin_glider
+  imports:
+    - cc_plugin_glider
 
 about:
-    home: https://github.com/ioos/cc-plugin-glider
-    license: Apache 2.0
-    summary: 'Compliance Checker Glider DAC plugin.'
+  home: https://github.com/ioos/cc-plugin-glider
+  license: Apache 2.0
+  summary: 'Compliance Checker Glider DAC plugin.'
 
 extra:
-    recipe-maintainers:
-        - benjwadams
-        - daf
-        - kwilcox
-        - lukecampbell
-        - ocefpaf
+  recipe-maintainers:
+    - benjwadams
+    - daf
+    - kwilcox
+    - lukecampbell
+    - ocefpaf
