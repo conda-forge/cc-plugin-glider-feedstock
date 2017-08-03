@@ -1,4 +1,4 @@
-{% set version = "1.0.3" %}
+{% set version = "1.0.4" %}
 
 package:
   name: cc-plugin-glider
@@ -7,7 +7,7 @@ package:
 source:
   fn: cc-plugin-glider-{{ version }}.tar.gz
   url: https://github.com/ioos/cc-plugin-glider/archive/{{ version }}.tar.gz
-  sha256: 66784b75ad3afe72f7e4592d7b77ff1ba58a8d7a466f421c2ffe7141a5faae99
+  sha256: 013b4167972ca22755a32fb2bd898ebb2f32ba648d85014596f368950f2fc209
 
 build:
   number: 0
