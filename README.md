@@ -14,9 +14,7 @@ Summary: Compliance Checker Glider DAC plugin.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/cc-plugin-glider-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/cc-plugin-glider-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/cc-plugin-glider-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/cc-plugin-glider-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/cc-plugin-glider-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/cc-plugin-glider-feedstock/branch/master)
+All platforms: [![Circle CI](https://circleci.com/gh/conda-forge/cc-plugin-glider-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/cc-plugin-glider-feedstock)
 
 Current release info
 ====================
