@@ -5,12 +5,12 @@ package:
   version: {{ version }}
 
 source:
-  fn: cc-plugin-glider-{{ version }}.tar.gz
-  url: https://github.com/ioos/cc-plugin-glider/archive/{{ version }}.tar.gz
-  sha256: 013b4167972ca22755a32fb2bd898ebb2f32ba648d85014596f368950f2fc209
+  url: https://pypi.io/packages/source/c/cc-plugin-glider/cc-plugin-glider-{{ version }}.tar.gz
+  sha256: 19b847e151f858523e4f0fda087bc050efec3a5125e6d0d7f359572a001f4912
 
 build:
-  number: 0
+  number: 1
+  noarch: python
   script: python setup.py install --single-version-externally-managed --record record.txt
   entry_points:
     - gliderdac = cc_plugin_glider.glider_dac:GliderCheck
