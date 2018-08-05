@@ -10,13 +10,12 @@ source:
 
 build:
   number: 1
-  noarch: python
   script: python -m pip install --no-deps --ignore-installed .
   entry_points:
     - gliderdac = cc_plugin_glider.glider_dac:GliderCheck
 
 requirements:
-  build:
+  host:
     - python
     - pip
   run:
