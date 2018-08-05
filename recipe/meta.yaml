@@ -9,14 +9,13 @@ source:
   sha256: 1cf420fdb925e7b86598a55f08abb8b23744e3fd3df9cc5a8ad9b0eeb7b5d471
 
 build:
-  number: 1
-  noarch: python
+  number: 2
   script: python -m pip install --no-deps --ignore-installed .
   entry_points:
     - gliderdac = cc_plugin_glider.glider_dac:GliderCheck
 
 requirements:
-  build:
+  host:
     - python
     - pip
   run:
