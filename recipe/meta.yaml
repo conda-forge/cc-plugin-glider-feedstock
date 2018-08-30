@@ -1,4 +1,4 @@
-{% set version = "1.0.5" %}
+{% set version = "1.0.6" %}
 
 package:
   name: cc-plugin-glider
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://github.com/ioos/cc-plugin-glider/archive/{{ version }}.tar.gz
-  sha256: 1cf420fdb925e7b86598a55f08abb8b23744e3fd3df9cc5a8ad9b0eeb7b5d471
+  sha256: f08810313efb11bf2ccf3696d2ef2cee36da211ab8bd1069ae13de5abe995330
 
 build:
-  number: 2
+  number: 0
   script: python -m pip install --no-deps --ignore-installed .
   entry_points:
     - gliderdac = cc_plugin_glider.glider_dac:GliderCheck
