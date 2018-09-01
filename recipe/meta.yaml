@@ -9,8 +9,9 @@ source:
   sha256: f08810313efb11bf2ccf3696d2ef2cee36da211ab8bd1069ae13de5abe995330
 
 build:
-  number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  number: 1
+  noarch: python
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
   entry_points:
     - gliderdac = cc_plugin_glider.glider_dac:GliderCheck
 
@@ -25,11 +26,14 @@ requirements:
 test:
   imports:
     - cc_plugin_glider
+  commands:
+    - compliance-checker --list-tests | grep -q gliderdac  # [not win]
 
 about:
   home: https://github.com/ioos/cc-plugin-glider
   license: Apache 2.0
-  summary: 'Compliance Checker Glider DAC plugin.'
+  license_file: LICENSE.txt
+  summary: 'Compliance Checker Glider DAC plugin'
 
 extra:
   recipe-maintainers:
