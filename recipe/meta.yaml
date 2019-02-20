@@ -1,4 +1,4 @@
-{% set version = "1.0.6" %}
+{% set version = "2.0.0" %}
 
 package:
   name: cc-plugin-glider
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://github.com/ioos/cc-plugin-glider/archive/{{ version }}.tar.gz
-  sha256: f08810313efb11bf2ccf3696d2ef2cee36da211ab8bd1069ae13de5abe995330
+  sha256: b8777a6e9e0b614deb0b32d9eab7680795f9df7a86f4ff091580db6f37987465
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
   entry_points:
