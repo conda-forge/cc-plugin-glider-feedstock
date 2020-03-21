@@ -1,4 +1,4 @@
-{% set version = "2.0.0" %}
+{% set version = "2.0.1" %}
 
 package:
   name: cc-plugin-glider
@@ -6,12 +6,12 @@ package:
 
 source:
   url: https://github.com/ioos/cc-plugin-glider/archive/{{ version }}.tar.gz
-  sha256: b8777a6e9e0b614deb0b32d9eab7680795f9df7a86f4ff091580db6f37987465
+  sha256: f3df72bd605cc776253bab6b586f66d8fd161cdbdd17616232e5c15c7d683b19
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
   entry_points:
     - gliderdac = cc_plugin_glider.glider_dac:GliderCheck
 
@@ -33,7 +33,7 @@ about:
   home: https://github.com/ioos/cc-plugin-glider
   license: Apache 2.0
   license_file: LICENSE.txt
-  summary: 'Compliance Checker Glider DAC plugin'
+  summary: Compliance Checker Glider DAC plugin
 
 extra:
   recipe-maintainers:
