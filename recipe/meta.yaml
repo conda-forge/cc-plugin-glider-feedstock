@@ -11,7 +11,7 @@ source:
 build:
   number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
+  script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - gliderdac = cc_plugin_glider.glider_dac:GliderCheck
 
@@ -21,17 +21,21 @@ requirements:
     - pip
   run:
     - python
-    - compliance-checker >=1.0.0
+    - compliance-checker >=4.0.0
 
 test:
   imports:
     - cc_plugin_glider
   commands:
     - compliance-checker --list-tests | grep -q gliderdac  # [not win]
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/ioos/cc-plugin-glider
-  license: Apache 2.0
+  license: Apache-2.0
   license_file: LICENSE.txt
   summary: Compliance Checker Glider DAC plugin
 
