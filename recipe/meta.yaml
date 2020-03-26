@@ -9,7 +9,7 @@ source:
   sha256: f3df72bd605cc776253bab6b586f66d8fd161cdbdd17616232e5c15c7d683b19
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
@@ -28,7 +28,6 @@ test:
     - cc_plugin_glider
   commands:
     - compliance-checker --list-tests | grep -q gliderdac  # [not win]
-  commands:
     - pip check
   requires:
     - pip
