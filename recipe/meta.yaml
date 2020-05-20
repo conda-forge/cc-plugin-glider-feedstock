@@ -21,7 +21,7 @@ requirements:
     - pip
   run:
     - python
-    - compliance-checker >=4.0.0
+    - compliance-checker >=4.3.2
 
 test:
   imports:
