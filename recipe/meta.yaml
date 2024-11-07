@@ -1,26 +1,29 @@
-{% set version = "2.0.3" %}
+{% set python_min = python_min|default("3.9") %}
+{% set name = "cc-plugin-glider" %}
+{% set version = "2.0.4" %}
 
 package:
-  name: cc-plugin-glider
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/ioos/cc-plugin-glider/archive/{{ version }}.tar.gz
-  sha256: fd1bf951fb4edc23e24d9eb5e15fc23f9cde5879d62c270bc1947c0edf43380e
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/cc_plugin_glider-{{ version }}.tar.gz
+  sha256: e7092d7fafb9a2b695b3d4615dd0f06561ff9a4aa23dc6cce2bfc6daba385559
 
 build:
   number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   entry_points:
     - gliderdac = cc_plugin_glider.glider_dac:GliderCheck
 
 requirements:
   host:
-    - python
+    - python {{ python_min }}.*
+    - setuptools
     - pip
   run:
-    - python
+    - python >={{ python_min }}
     - compliance-checker >=4.3.2
 
 test:
@@ -30,6 +33,7 @@ test:
     - compliance-checker --list-tests | grep -q gliderdac  # [not win]
     - pip check
   requires:
+    - python ={{ python_min }}
     - pip
 
 about:
