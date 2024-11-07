@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/ioos/cc-plugin-glider/archive/v{{ version }}.tar.gz
-  sha256: bbac17de8667626785b26d6163a111df849ad724675fcd660d8a5bace31cb108
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/cc_plugin_glider-{{ version }}.tar.gz
+  sha256: e7092d7fafb9a2b695b3d4615dd0f06561ff9a4aa23dc6cce2bfc6daba385559
 
 build:
   number: 0
