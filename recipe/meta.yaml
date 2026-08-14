@@ -1,14 +1,14 @@
 {% set python_min = python_min|default("3.9") %}
 {% set name = "cc-plugin-glider" %}
-{% set version = "2.2.1" %}
+{% set version = "2.3.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/cc_plugin_glider-{{ version }}.tar.gz
-  sha256: d4e333a3892fcb75b0bda28fdbdb190f326ff25e6e5ad706f9560ae56e9a5ca8
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/cc_plugin_glider-{{ version }}.tar.gz
+  sha256: 5056dd333fd6f11af0a5c36de1193ca689889e5d682167bc220307895f933209
 
 build:
   number: 0
