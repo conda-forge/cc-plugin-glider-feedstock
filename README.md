@@ -3,7 +3,7 @@ About cc-plugin-glider-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/cc-plugin-glider-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/ioos/cc-plugin-glider
+Home: https://pypi.org/project/cc-plugin-glider/
 
 Package license: Apache-2.0
 
@@ -188,9 +188,5 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@benjwadams](https://github.com/benjwadams/)
-* [@daf](https://github.com/daf/)
-* [@kwilcox](https://github.com/kwilcox/)
-* [@lukecampbell](https://github.com/lukecampbell/)
 * [@ocefpaf](https://github.com/ocefpaf/)
 
